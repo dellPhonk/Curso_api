@@ -22,4 +22,10 @@ servidor.get('/calculadora/somar/:n1/:n2', (req,resp) => {
     resp.send(`a soma de ${n1} + ${n2} é ${calc}`);
 })
 
+servidor.get('/revisao/sexta/:r', (req, resp) => {
+    let riqueza = Number(req.params.r);
+
+    resp.send(`A sua riqueza é de ${riqueza}`);
+})
+
 servidor.listen(5010, () => console.log('Api subida com sucesso na porta 5010!'));
